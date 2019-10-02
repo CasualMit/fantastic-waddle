@@ -4,12 +4,14 @@ def strftime():
     s = vandaag.strftime("%a %d %b %Y, %H:%M:%S")
     return (s)
 
-def checkpoint(name):
+def checkpoint():
     file = open('hardlopers.txt', 'a+')
-    name = name
     current = strftime()
-    file.write((f'{current}, {name} \n'))
-    return
+    while True:
+        name = input('Naam van hardloper: ')
+        if name == '':
+            return
+        file.write((f'{current}, {name} \n'))
 
 
-checkpoint(input('Naam van hardloper: '))
+checkpoint()
