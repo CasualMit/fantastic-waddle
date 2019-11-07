@@ -17,18 +17,18 @@ def inlezen_eindstation(stations, beginstation):
 
 
 def omroepen_reis(stations, beginstation, eindstation):
-    beginstationNummer = stations.index(beginstation) + 1
-    eindstationNummer = stations.index(eindstation) + 1
-    afstandStations = eindstationNummer - beginstationNummer
-    prijs = afstandStations * 5
-    print(f'Het beginstation {beginstation} is het {beginstationNummer}e station in het traject')
-    print(f'Het eindstation {eindstation} is het {eindstationNummer}e station in het traject')
-    print(f'De afstand bedraagt {afstandStations} station(s)')
+    beginstation_nummer = stations.index(beginstation) + 1
+    eindstation_nummer = stations.index(eindstation) + 1
+    afstand_stations = eindstation_nummer - beginstation_nummer
+    prijs = afstand_stations * 5
+    print(f'Het beginstation {beginstation} is het {beginstation_nummer}e station in het traject')
+    print(f'Het eindstation {eindstation} is het {eindstation_nummer}e station in het traject')
+    print(f'De afstand bedraagt {afstand_stations} station(s)')
     print(f'De prijs van het kaartje is {prijs} euro')
     print(f'Jij stapt in de trein in: {beginstation}')
-    for i in range(beginstationNummer, (eindstationNummer - 1), 1):
-        print(' - {}'.format(stations[i]))
-    print('Je stapt uit in: {}'.format(eindstation))
+    for i in range(beginstation_nummer, (eindstation_nummer - 1), 1):
+        print(f' - {stations[i]}')
+    print(f'Je stapt uit in: {eindstation}')
 
 
 stations = ['Schagen', 'Heerhugowaard', 'Alkmaar', 'Castricum', 'Amsterdam Sloterdijk', 'Amsterdam Centraal',

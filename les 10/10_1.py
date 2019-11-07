@@ -1,13 +1,13 @@
-price = 4356
+amount_due = 4356
 
 
 def priceprogram():
     while True:
         try:
-            persons = int(input('Hoeveel mensen gaan er mee? '))
-            if persons < 0:
+            people = int(input('Hoeveel mensen gaan er mee? '))
+            if people < 0:
                 raise Exception
-            elif persons == 0:
+            elif people == 0:
                 raise ZeroDivisionError
             else:
                 break
@@ -19,7 +19,7 @@ def priceprogram():
             print('Je kan geen negatief getal invoeren.')
         except:
             print('Er is iets misgegaan neem contact op met uw beheerder')
-    result = price / persons
+    result = amount_due / people
     print(f'De kosten zijn €{result} per persoon')
 
 
